@@ -4,14 +4,20 @@ const classVideos = [
   {
     id: 1,
     title: "How to Make Sadza",
-    url: "https://www.youtube.com/embed/4Q46xYqUwZQ",
+    url: "https://www.youtube.com/embed/kwXel6xGGww",
     chef: "Chef Tendai Moyo",
   },
   {
     id: 2,
     title: "Cooking Muriwo Unedovi",
-    url: "https://www.youtube.com/embed/2Vv-BfVoq4g",
+    url: "https://www.youtube.com/embed/f4mODRjE1vc",
     chef: "Chef Rutendo Chirwa",
+  },
+   {
+    id: 3,
+    title: "Cooking Macimbi",
+    url: "https://www.youtube.com/embed/h3bbpAfsUBM",
+    chef: "Chef Tariro Musiringofa",
   },
 ];
 
@@ -49,6 +55,12 @@ const initialDishes = [
     description: "Tiny dried fish fried and served with sadza and vegetables.",
     image: "/kapenta-fish-a-local.jpg"
   },
+   {
+    id: 6,
+    name: "Sadza and Macimbi",
+    description: "Mopane worms served with sadza.",
+    image: "/Macimbi.jpeg"
+  },
 ];
 
 function App() {
@@ -67,16 +79,27 @@ function App() {
       </header>
 
       
-      <section className="relative bg-cover bg-center h-[300px]" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1280&q=80)' }}>
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white text-4xl md:text-5xl font-bold mb-2">Taste Zimbabwean Cuisine</h1>
-          <p className="text-white text-lg md:text-xl font-medium">Discover, Cook, and Share Our Local Flavors</p>
-        </div>
-      </section>
+      <section
+  className="relative bg-cover bg-center h-[300px]"
+  style={{
+    backgroundImage:
+      "url(https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1280&q=80)",
+  }}
+>
+  <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
+    <h1 className="text-4xl md:text-5xl font-bold mb-2 font-mono typing-effect">
+      <span className="colorchange">Taste Zimbabwean Cuisine</span>
+    </h1>
+    <p className="text-white text-lg md:text-xl font-medium">
+      Discover, Cook, and Share Our Local Flavors
+    </p>
+  </div>
+</section>
+
 
      
       <section className="max-w-5xl mx-auto py-10 px-4">
-        <h2 className="text-2xl font-bold text-orange-600 mb-4">Featured Dishes</h2>
+        <h2 className="text-2xl font-bold text-orange-600 mb-4">Our Dishes</h2>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {initialDishes.map((dish) => (
             <div key={dish.id} className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden">
